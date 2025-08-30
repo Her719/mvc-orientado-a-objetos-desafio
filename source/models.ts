@@ -23,17 +23,13 @@ class ContactsCollection {
       const path = require("path");
       const filePath = path.resolve(__dirname, "../source/contacts.json");
       const contactosAPArsear = readFileSync(filePath, "utf-8");
-
-      // const contactosAPArsear = readFileSync(
-      //   __dirname + "/contacts.json",
-      //   "utf-8"
-      // );
       this.dataContact = JSON.parse(contactosAPArsear);
       return this.dataContact;
     } catch (error) {
       return console.log("Error al cargar contactos:", error);
     }
   }
+
   //retorna la collection completa
   getAll() {
     return this.dataContact;

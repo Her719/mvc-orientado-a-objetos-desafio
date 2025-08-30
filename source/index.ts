@@ -17,12 +17,12 @@ function parseaParams(argv): ContactsControllerOptions {
 }
 
 function main() {
-  const args = process.argv.slice(2); // Obtenemos los argumentos de la línea de comandos
-  const options = parseaParams(args); // Parseamos los parámetros
-  const contactsCollection = new ContactsCollection(); // Creamos la colección
-  const contactsController = new ContactsController(contactsCollection); // Creamos el controlador
-  const result = contactsController.processOptions(options); // Procesamos las opciones
-  console.log(result); // Imprimimos el resultado en la terminal
+  const args = process.argv.slice(2);
+  const options = parseaParams(args);
+  const contactsCollection = new ContactsCollection();
+  const contactsController = new ContactsController(contactsCollection);
+  const result = contactsController.processOptions(options);
+  console.log(result);
 }
 
 main();
