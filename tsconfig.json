@@ -2,11 +2,15 @@
   "extends": "@sindresorhus/tsconfig",
   "compilerOptions": {
     "noUnusedLocals": false,
-    "module": "commonjs",
+    "module": "ESNext",
     "outDir": "build",
+    "rootDir": "./source",
     "resolveJsonModule": true,
     "noUnusedParameters": false,
     "allowSyntheticDefaultImports": true,
-    "noImplicitAny": false
-  }
+    "noImplicitAny": false,
+    "target": "ES2019"
+  },
+  "include": ["source"],
+  "exclude": ["node_modules", "build"]
 }
